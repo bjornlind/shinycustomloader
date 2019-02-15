@@ -8,7 +8,7 @@ $(document).on('shiny:recalculating', function(event) {
 
 /* When new value or error comes in, hide loader container (if any) & show the output */
 $(document).on('shiny:value shiny:error', function(event) {
-  console.log(event.target.id);
+  // console.log(event.target.id);
     $("#"+event.target.id).siblings(".load-container, .shiny-loader-placeholder").hide();
     $("#"+event.target.id).siblings(".load-container").siblings('.shiny-bound-output').css('visibility', 'visible');
     // if there is a proxy div, show the previous output in case it was hidden
